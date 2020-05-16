@@ -1,0 +1,9 @@
+extends ../layout
+
+block content
+    h1= title
+
+    form(action="/books", method="post")
+        include form
+        input(type="submit" value="Create New Book")
+        a(href="/books" class="button") Cancel

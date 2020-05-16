@@ -1,4 +1,12 @@
+html {
+  height: 100%;
+}
+
 body {
+  background: url("/static/images/books.jpg");
+  background-repeat: no-repeat;
+  background-color: #eef0f4;
+  background-position: right;
   padding: 10px 50px 50px;
   font: 18px "Garamond", serif;
 }
@@ -69,6 +77,11 @@ tr:nth-child(2n) {
 
 td {
   padding: 5px 20px 5px 10px;
+}
+
+td a {
+  width: 100%;
+  display: block;
 }
 
 label {
