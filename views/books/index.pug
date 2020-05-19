@@ -22,6 +22,8 @@ block content
                     td= book.author
                     td= book.genre
                     td= book.year
+    br
+    br
     p
         - for (var x = 0; x < numberOfPages; x++)
             a(class="js-page-link" href="/books?page=" + (x + 1)) #{x+1}

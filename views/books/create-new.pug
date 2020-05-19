@@ -6,5 +6,6 @@ block content
     include error
     form(action="/books/new", method="post")
         include form
-        input(type="submit" value="Create New Book")
-        a(href="/books" class="button") Cancel
+        p
+            input(type="submit" value="Create New Book")
+            a(href="/books" class="button") Cancel
