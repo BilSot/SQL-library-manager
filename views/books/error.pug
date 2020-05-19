@@ -1,0 +1,6 @@
+if(errors)
+  h3.errors Oops, an error occurred!
+  ul.errors
+    each error in errors
+      li
+        h4= error.message

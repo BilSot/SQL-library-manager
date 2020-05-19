@@ -22,7 +22,7 @@ a {
     color: black;
   }
 
-a.button, input[type=submit] {
+a.button, input[type=submit], .delete-button, .search-button {
   color: white;
   background: #019875;
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -32,18 +32,32 @@ a.button, input[type=submit] {
   cursor: pointer;
 }
 
-form a.button, input[type=submit] {
+.delete-button{
+  color: white!important;
+}
+
+form a.button, input[type=submit], .delete-button, .search-button {
   margin-left: 140px;
   transition: 0.4s;
+}
+
+.search-button{
+  margin-left: 40px;
 }
 
 input[type=submit] {
   border: 0;
 }
 
-  a.button:hover, input[type=submit]:hover {
+  a.button:hover, input[type=submit]:hover, .delete-button:hover, .search-button:hover {
     background-color: #01b189;
   }
+
+.js-page-link{
+  border: 2px solid;
+  padding: 5px 10px;
+  margin-right: 5px;
+}
 
 p {
   margin: 20px auto;
@@ -56,8 +70,8 @@ ul {
   line-height: 1.3em;
 }
 
-h2 {
-  border-top: 2px solid #e7e7e7;
+h1, h2 {
+  border-bottom: 2px solid #e7e7e7;
   padding-top: 20px;
 }
 
@@ -105,6 +119,6 @@ input[type=text] {
   width: 300px;
 }
 
-.error {
-  color: rgb(236, 15, 15);
+.errors {
+  color: rgb(236, 15, 15)!important;
 }

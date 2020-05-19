@@ -2,18 +2,31 @@ extends ../layout
 
 block content
     h1= title
-    a(href="/books/new", class="button") Create New Book
+
+    include error
+    p
+        a(href="/books/new", class="button") Create New Book
 
     table
-        tr
-            th Title
-            th Author
-            th Genre
-            th Year
-        each book in books
+        thead
             tr
-                td
-                    a(href="/books/" + book.id) #{book.title}
-                td= book.author
-                td= book.genre
-                td= book.year
+                th Title
+                th Author
+                th Genre
+                th Year
+        tbody
+            each book in books
+                tr
+                    td
+                        a(href="/books/" + book.id) #{book.title}
+                    td= book.author
+                    td= book.genre
+                    td= book.year
+    p
+        - for (var x = 0; x < numberOfPages; x++)
+            a(class="js-page-link" href="/books?page=" + (x + 1)) #{x+1}
+    p
+        form(action="/books", method="post" id="search-form")
+            div
+                input(type="text" id="search-field" placeholder="Search..." name="search" value= search)
+                button.search-button(type="submit") Search
