@@ -9,7 +9,8 @@ function asyncHandler(cb) {
         try {
             await cb(req, res, next)
         } catch (error) {
-            res.status(500).send(error);
+            res.status = 404;
+            next(error);
         }
     }
 }
